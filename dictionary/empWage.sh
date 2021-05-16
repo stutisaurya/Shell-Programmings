@@ -1,4 +1,3 @@
-
 #!/bin/bash -x
 
 #constants
@@ -11,6 +10,8 @@ MAX_HRS_IN_MONTH=50
 #variables
 totalEmpHrs=0
 totalWorkingDays=0
+
+declare -A empDailyWage
 
 function getWorkingHrs() {
 case $1 in
@@ -45,3 +46,4 @@ empDailyWage[$totalWorkingDays]="$( calculateWage $workHours )"
 done
 wage=$(($EMP_RATE_PER_HR*$totalEmpHrs))
 echo Daily Wage : ${empDailyWage[@]}
+echo "Days :: " ${!empDailyWage[@]}

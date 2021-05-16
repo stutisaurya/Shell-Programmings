@@ -3,9 +3,9 @@
 Is_FULLTIME=1
 IS_PARTTIME=2
 EMP_RATE_PER_HR=20
-empcheck=$((RANDOM%3))
+empCheck=$((RANDOM%3))
 
-if [ $empcheck -eq $ $IS_FULLTIME ]
+if [ $empcheck -eq $IS_FULLTIME ]
 then
     empHrs=8
 elif [ $empcheck -eq $IS_PARTTIME ]
